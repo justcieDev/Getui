@@ -1,0 +1,18 @@
+{
+  "name": "justice/getui",
+  "description": "golinks getui SDK",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "justice",
+      "email": "z_s_c_p@163.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Getui\\": "src/"
+    }
+  }
+}
