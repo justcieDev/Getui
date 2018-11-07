@@ -149,12 +149,11 @@ class Push {
 
     }
 
-    /**
-     * 列表推送
+    /***
      * @param $templateName
      * @param string $taskGroupName
      * @param array ...$AppIdToClientIds
-     * @return src\Array
+     * @return libarys\Array
      * @throws \Exception
      */
     public function pushMessageToList($templateName, $taskGroupName = '', ...$AppIdToClientIds)
