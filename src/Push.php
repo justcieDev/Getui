@@ -174,7 +174,6 @@ class Push {
         }
         $targetList = [];
         foreach ($AppIdToClientIds as $AppIdToClientId) {
-            //接收方1
             $target = new \IGtTarget();
             $target->set_appId($AppIdToClientId['appId']);
             $target->set_clientId($AppIdToClientId['clientId']);
