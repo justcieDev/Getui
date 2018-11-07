@@ -1,15 +1,20 @@
 {
-  "name": "justice/getui-sdk",
-  "description": "justice getui SDK",
+  "name": "golinks-helper-php/getui-sdk",
+  "description": "golinks-helper-php getui SDK",
   "license": "MIT",
+  "keywords": [
+    "getui"
+  ],
   "authors": [
     {
-      "name": "justice",
+      "name": "golinks-helper-php",
       "email": "z_s_c_p@163.com"
     }
   ],
-  "minimum-stability": "dev",
-  "require": {},
+  "minimum-stability": "product",
+  "require": {
+    "php": ">=5.6.0"
+  },
   "autoload": {
     "psr-4": {
       "Getui\\": "src/"
