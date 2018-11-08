@@ -23,7 +23,7 @@ class IGtSend {
     var $body;
 
     /**
-     * 通知内容中携带的透传内容
+     * 通知内容中携带的内容
      * @var
      */
     var $payload;
@@ -70,4 +70,9 @@ class IGtSend {
      * @var
      */
     var $webUrl;
+    /**
+     * 透传内容
+     * @var
+     */
+    var $transmissionContent;
 }

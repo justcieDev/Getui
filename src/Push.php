@@ -230,7 +230,7 @@ class Push {
         $template->set_appId($this->appId);// 应用appid
         $template->set_appkey($this->appKey);// 应用appkey
         $template->set_transmissionType(1);//透传消息类型
-        $template->set_transmissionContent($this->sendModel->payload);//透传内容
+        $template->set_transmissionContent($this->sendModel->transmissionContent);// 透传内容
         // 第三方厂商透传消息
         $notify = new IGtNotify();
         $notify->set_title($this->sendModel->title);
@@ -248,7 +248,7 @@ class Push {
             $apn->alertMsg = $alertmsg;
             $apn->badge = 2;
             $apn->sound = "";
-            $apn->add_customMsg("payload", 'golinks://');
+            $apn->add_customMsg("payload", $this->sendModel->payload);
             $apn->contentAvailable = 1;
             $apn->category = "ACTIONABLE";
             $template->set_apnInfo($apn);
@@ -287,7 +287,7 @@ class Push {
         $template->set_appId($this->appId);//应用appid
         $template->set_appkey($this->appKey);//应用appkey
         $template->set_transmissionType(1); //透传消息类型
-        $template->set_transmissionContent($this->sendModel->payload); //透传内容
+        $template->set_transmissionContent($this->sendModel->transmissionContent); //透传内容
         $template->set_title($this->sendModel->title); //通知栏标题
         $template->set_text($this->sendModel->body); //通知栏内容
         $template->set_logo($this->sendModel->logo); //通知栏logo
