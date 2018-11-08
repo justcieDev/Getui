@@ -70,9 +70,4 @@ class IGtSend {
      * @var
      */
     var $webUrl;
-    /**
-     * clientId的网页跳转地址
-     * @var
-     */
-    var $clientId;
 }

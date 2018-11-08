@@ -16,6 +16,13 @@ class Push {
     protected $IGtPush;
     protected $sendModel;
 
+    /***
+     * Push constructor.
+     * @param $appKey
+     * @param $masterSecret
+     * @param $appId
+     * @param IGtSend $sendModel (消息模板所需参数的模型对象)
+     */
     public function __construct($appKey, $masterSecret, $appId, IGtSend $sendModel)
     {
         $this->appKey = $appKey;
@@ -119,7 +126,7 @@ class Push {
     }
 
     // 单推接口
-    public function pushMessageToSingle($templateName)
+    public function pushMessageToSingle($clientId, $templateName)
     {
         $igt = $this->IGtPush;
         // 选择模板
@@ -132,7 +139,7 @@ class Push {
         //接收方
         $target = new \IGtTarget();
         $target->set_appId($this->appId);
-        $target->set_clientId($this->sendModel->clientId);
+        $target->set_clientId($clientId);
         //$target->set_alias(Alias);
 
         try {
