@@ -2,6 +2,7 @@
 
 namespace Getui;
 
+use Getui\libarys\igetui\model\IGTTemplate;
 use Getui\libarys\IGtPush;
 use Getui\libarys\igetui\model\IGtSend;
 use Getui\libarys\igetui\model\IGtNotify;
@@ -105,16 +106,16 @@ class Push {
         // 4.NotyPopLoadTemplate：通知弹框下载功能模板
         // 3.NotificationTemplate：通知透传功能模板
         switch ($templateName) {
-            case 'IGtNotificationTemplate':
+            case IGTTemplate::$IGTNOTIFICATION:
                 $template = self::IGtNotificationTemplate();
                 break;
-            case 'IGtLinkTemplate':
+            case IGTTemplate::$IGTLINK:
                 $template = self::IGtLinkTemplate();
                 break;
-            case 'IGtNotyPopLoadTemplate':
+            case IGTTemplate::$IGTNOTYPOPLOAD:
                 $template = self::IGtNotyPopLoadTemplate();
                 break;
-            case 'IGtTransmissionTemplate':
+            case IGTTemplate::$IGTTRANSMISSION:
                 $template = $this->IGtTransmissionTemplate();
                 break;
             default:
