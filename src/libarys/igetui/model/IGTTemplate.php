@@ -15,8 +15,8 @@ class IGTTemplate {
     // 3.IGTNOTIFICATION：通知透传功能模板
     // 4.IGTNOTYPOPLOAD：通知弹框下载功能模板
 
-    public static $IGTNOTIFICATION;
-    public static $IGTLINK;
-    public static $IGTNOTYPOPLOAD;
-    public static $IGTTRANSMISSION;
+    public static $IGTNOTIFICATION = 'IGtNotificationTemplate';
+    public static $IGTLINK = 'IGtLinkTemplate';
+    public static $IGTNOTYPOPLOAD = 'IGtNotyPopLoadTemplate';
+    public static $IGTTRANSMISSION = 'IGtTransmissionTemplate';
 }
