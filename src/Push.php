@@ -230,7 +230,7 @@ class Push {
         $template = new \IGtTransmissionTemplate();
         $template->set_appId($this->appId);// 应用appid
         $template->set_appkey($this->appKey);// 应用appkey
-        $template->set_transmissionType(1);//透传消息类型
+        $template->set_transmissionType(2);//透传消息类型,应用启动类型，1：强制应用启动  2：等待应用启动
         $template->set_transmissionContent($this->sendModel->transmissionContent);// 透传内容
         // 第三方厂商透传消息
         $notify = new IGtNotify();
@@ -244,10 +244,11 @@ class Push {
         if ($this->sendModel->APNType == "SIMPLE") {
             // APN简单推送
             $apn = new \IGtAPNPayload();
-            $alertmsg = new \SimpleAlertMsg();
+            $alertmsg = new \DictionaryAlertMsg();
+            $alertmsg->body=$this->sendModel->body;
             $alertmsg->alertMsg = $this->sendModel->body;
             $apn->alertMsg = $alertmsg;
-            $apn->badge = 2;
+            $apn->badge = 0;
             $apn->sound = "";
             $apn->add_customMsg("payload", $this->sendModel->payload);
             $apn->contentAvailable = 1;
